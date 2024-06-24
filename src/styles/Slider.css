@@ -1,0 +1,29 @@
+/* Slider.css */
+.carousel-indicators {
+    display: none;
+  }
+  
+  .custom-indicators {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 10px; /* Позиция индикаторов относительно нижней части слайдера */
+    width: 100%;
+  }
+  
+  .custom-indicator {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #46A358;
+    opacity: 0.3;
+    margin: 0 5px;
+    transition: background-color 0.3s, opacity 0.3s;
+    cursor: pointer;
+  }
+  
+  .custom-indicator.active {
+    background-color: #96C361;
+    opacity: 1;
+  }
+  

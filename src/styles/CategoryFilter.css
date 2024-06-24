@@ -1,0 +1,190 @@
+.category-filter-container {
+  background-color: #fff;
+}
+
+.category-filter {
+  width: 310px;
+  height: 626px;
+  background-color: #fbfbfb;
+  padding: 16px;
+  border: none;
+  text-align: left; /* Выровнять весь текст по левому краю */
+}
+
+.categories h4,
+.price-range h4 {
+  margin-bottom: 17px;
+  font-size: 18px;
+  color: #333;
+  text-align: left; /* Выровнять текст заголовков по левому краю */
+}
+
+.categories ul {
+  list-style: none;
+  padding: 0;
+  text-align: left; /* Выровнять текст категорий по левому краю */
+}
+
+.categories li {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 24px;
+  padding-left: 0px;
+  padding-right: 24px;
+  cursor: pointer;
+  font-family: Stolzl;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 18.5px;
+  text-align: left;
+}
+
+.categories li:hover .category-name,
+.categories li:hover .category-count,
+.categories li:hover .icon {
+  color: #96c361;
+}
+
+.categories li:hover .icon svg path {
+  stroke: #96c361;
+}
+
+.categories .category-count {
+  display: flex;
+  align-items: center;
+}
+
+.categories .icon {
+  margin-right: 10px; /* Отступ справа для иконки */
+}
+
+.categories .category-name {
+  flex: 1;
+  text-align: left; /* Выровнять текст категорий по левому краю */
+}
+
+.price-range {
+  margin-top: 36px;
+  text-align: left; /* Выровнять текст цены по левому краю */
+}
+
+.price-range .slider {
+  width: 100%;
+  margin: 10px 0;
+}
+
+.price-values {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  font-family: Stolzl;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 18.5px;
+  text-align: left;
+  color: #96C361;
+}
+
+.filter-buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.apply-button,
+.reset-button {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: Stolzl;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 18.5px;
+  text-align: center; /* Выровнять текст в кнопках по центру */
+}
+
+.apply-button {
+  background-color: #96c361;
+  color: white;
+  width: 146px;
+  height: 33px;
+  padding: 7px 26px;
+  border-radius: 6px;
+}
+
+.reset-button {
+  background-color: #231f20;
+  color: white;
+  width: 107px;
+  height: 33px;
+  padding: 7px 26px;
+  border-radius: 6px;
+}
+
+.advertisement {
+  margin-top: 20px;
+}
+
+.advertisement img {
+  width: 310px;
+  height: 599px;
+}
+.advertisement {
+  background-color: none;
+}
+.horizontal-slider {
+  width: 100%;
+  height: 4px;
+  margin: 20px 0;
+  background: #46a35833;
+  border-radius: 5px;
+  position: relative;
+}
+
+.track-0 {
+  background: #46a35833;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  border-radius: 5px 0 0 5px;
+}
+
+.track-1 {
+  background: #96c361;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+}
+
+.track-2 {
+  background: #46a35833;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  border-radius: 0 5px 5px 0;
+}
+
+.thumb {
+  height: 15px;
+  width: 15px;
+  background-color: #96c361;
+  border-radius: 50%;
+  cursor: pointer;
+  top: 50%;
+  transform: translateY(-50%);
+  border: 1px solid #fff;
+  position: absolute;
+}
+
+.thumb.active {
+  border: 3px solid #ffffff;
+}
+
+
+.view-toggle IoGridSharp :hover {
+  color: #96c361;
+  height: 23px;
+  width: 23px;
+}

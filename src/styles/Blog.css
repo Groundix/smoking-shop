@@ -1,0 +1,98 @@
+.blog-container {
+    width: 1207px;
+    margin: 0 auto;
+    margin-top: 128px;
+  }
+  
+  .blog-header {
+    font-family: 'Stolzl', sans-serif;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  .blog-header h2 {
+    font-size: 30px;
+    font-family: 'Stolzl', sans-serif;
+    font-weight: 500;
+    line-height: 37px;
+    margin-bottom: 10px;
+    color: #3D3D3D;
+  }
+  
+  .blog-header p {
+    font-family: 'Stolzl', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: center;
+    color: #727272;
+  }
+  
+  .blog-posts {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .blog-post {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 268px;
+    margin-bottom: 20px;
+  }
+  
+  .blog-image {
+    width: 268px;
+    height: 195.17px;
+  }
+  
+  .blog-text {
+    margin-top: 0;
+    width: 268px;
+    height: 167px;
+    background-color: #FBFBFB;
+    padding: 6.83px;
+    text-align: left;
+    justify-content: flex-start;
+  }
+  
+  .blog-date {
+    font-size: 14px;
+    color: #96C361;
+    margin-bottom: 5px;
+    text-align: left;
+  }
+  
+  .blog-text h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    text-align: left;
+  }
+  
+  .blog-text p {
+    font-size: 14px;
+    text-align: left;
+  }
+  
+  .blog-read-more {
+    font-size: 14px;
+    color: #333;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    text-align: left;
+  }
+  .blog-description {
+    color:#727272
+  }
+  .blog-read-more:hover {
+    color: #96C361;
+  }
+  
+  .blog-read-more span {
+    font-size: 18px;
+    margin-left: 5px;
+    text-align: left;
+  }
+  

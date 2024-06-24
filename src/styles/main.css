@@ -1,0 +1,48 @@
+/* main.css */
+@font-face {
+  font-family: "Stolzl";
+  src: url("/public/Stolzl/stolzl_bold.otf") format("otf"),
+    url("/public/Stolzl/stolzl_light.otf") format("otf"),
+    url("/public/Stolzl/stolzl_regular.otf") format("otf"),
+    url("/public/Stolzl/stolzl_medium.otf") format("otf"),
+    url("/public/Stolzl/stolzl_thin.otf") format("otf"),
+    url("/public/Stolzl/stolzl_book.otf") format("otf");
+
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Helvetica";
+  src: url("/public/Helvetica/helvetica_bold.otf") format("otf"),
+    url("/public/Helvetica/helvetica_light.otf") format("otf"),
+    url("/public/Helvetica/helvetica_boldoblique.otf") format("otf"),
+    url("/public/Helvetica/helvetica_lightoblique.otf") format("otf"),
+    url("/public/Helvetica/helvetica_oblique.otf") format("otf"),
+    url("/public/Helvetica/helvetica_regular.otf") format("otf");
+}
+body {
+  font-family: "Stolzl", sans-serif;
+  font-weight: normal;
+  font-style: normal;
+}
+
+.main-content {
+  display: flex;
+  justify-content: center; /* Центрируем контент */
+  background-color: #f9f9f9;
+  margin: 46px auto 0 auto; /* Отступ сверху 46 пикселей */
+  width: 1200px; /* Устанавливаем ширину для соответствия Slider и Header */
+}
+
+.category-filter {
+  width: 310px;
+  margin-right: 20px;
+}
+
+.product-grid {
+  flex-grow: 1;
+  width: calc(
+    100% - 330px
+  ); /* Учитываем ширину category-filter и margin-right */
+}

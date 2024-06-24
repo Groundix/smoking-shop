@@ -1,0 +1,153 @@
+/* Header.css */
+.navbar-custom {
+  background-color: #fff;
+  max-width: 1200px;
+  height: 53px;
+  margin: 25px auto;
+  padding: 0;
+  border-bottom: 1px solid #96C361;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.navbar-brand {
+  margin-left: 0;
+}
+
+.navbar-brand img {
+  width: 172px;
+  height: auto;
+}
+
+.navbar-toggler {
+  margin-left: auto;
+}
+
+.navbar-collapse {
+  flex-grow: 0;
+}
+
+.nav-custom {
+  width: auto;
+  height: 45px;
+  gap: 0;
+  opacity: 1;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.nav-link {
+  color: #5A5A5A !important;
+  font-family: 'Stolzl', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 18.5px;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  transition: color 0.3s, border-bottom-color 0.3s;
+}
+
+.nav-link:hover {
+  color: #96C361 !important;
+}
+
+.nav-link.active {
+  font-weight: 500;
+  border-bottom: 3px solid #96C361;
+  text-decoration: none;
+  color: #5A5A5A;
+  margin-bottom: -5px; /* Adjust to align with the bottom border */
+}
+
+.icon-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 30px;
+  position: relative;
+}
+
+.icon-container .icon {
+  color: #3D3D3D;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.cart-count {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  border-radius: 50%;
+  background-color: #96C361;
+  font-size: 12px;
+  position: absolute;
+  color: #fff;
+  top: -10px;
+  right: -10px;
+  text-align: center;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  right: 0;
+  top: 9px;
+}
+
+.nav-right .btn {
+  margin-left: 30px;
+  background-color: #96C361;
+  border-color: #96C361;
+  color: #fff;
+  transition: background-color 0.3s;
+  width: 100px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-right .btn:hover {
+  background-color: #7daf42;
+  border-color: #7daf42;
+}
+
+.logout-icon {
+  margin-right: 5px;
+  color: white;
+  font-size: 16px; 
+}
+
+.text-white {
+  color: white !important;
+}
+
+.mx-2 {
+  margin-left: 0.5rem !important;
+  margin-right: 0.5rem !important;
+}
+
+.mr-2 {
+  margin-right: 0.5rem !important;
+}
+
+.nav-custom .nav-item:nth-child(1) {
+  margin-right: 64px;
+}
+
+.nav-custom .nav-item:nth-child(2) {
+  margin-right: 59px;
+}
+
+.nav-custom .nav-item:nth-child(3) {
+  margin-right: 64px;
+}

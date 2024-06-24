@@ -1,0 +1,360 @@
+.product-grid {
+  width: calc(100% - 330px);
+  padding: 20px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+}
+
+.product-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.product-categories span {
+  margin-right: 20px;
+  cursor: pointer;
+  font-family: Stolzl;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 18.5px;
+  text-align: left;
+}
+
+.product-categories span:hover{
+  color: #96c361
+}
+.product-categories span.active {
+  border-bottom: 3px solid #96c361;
+  color: #96c361;
+}
+
+.view-toggle span {
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.view-toggle span:hover,
+.view-toggle span.active {
+  color: #96c361;
+}
+
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.product-card {
+  width: 258px;
+  height: 370px;
+  margin-bottom: 13px;
+  padding: 10px;
+  position: relative;
+  overflow: hidden;
+  background: #FBFBFB;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  box-shadow: 0px 0px 0px 0px rgba(135, 135, 135, 0.5);
+}
+
+.product-card:hover {
+  border-top: #96c361 solid 1px;
+  box-shadow: 0px 0px 10px 0px rgba(135, 135, 135, 0.5);
+}
+
+.product-card:nth-child(3n+1) {
+  margin-left: 0;
+}
+
+.grid-view {
+  color:  #DADADA;
+  width: 23px;
+  height: 23px;
+}
+
+.list-view {
+  color: #DADADA;
+  width: 23px;
+  height: 23px;
+}
+
+.product-card.list {
+  flex-direction: row;
+  height: auto;
+  width: 100%;
+}
+
+.product-card.list .image-container {
+  width: 180px;
+  height: 140px;
+  margin-right: 2rem;
+}
+
+.product-card.list img {
+  width: 100%;
+  height: 100%;
+}
+
+.product-card.list:hover img {
+  transform: scale(1.04);
+}
+
+.product-card.list .product-info {
+  margin-left: 20px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.product-card.list .product-controls {
+  margin-top: 0;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: row-reverse;
+}
+
+.product-card .image-container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 204px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.product-card img {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.3s, width 0.3s, height 0.3s;
+}
+
+.product-card:hover img {
+  transform: scale(1.04);
+}
+
+.grid-controls {
+  display: none;
+  position: absolute;
+  bottom: 90px;
+  left: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+}
+
+.list-controls {
+  display: none;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  position: relative;
+  margin-top: 50px;
+  margin-left: 250px;
+  margin-left: auto;
+}
+
+.product-card.grid:hover .grid-controls,
+.product-card.grid:hover .wishlist {
+  display: flex;
+}
+
+.product-card.list:hover .list-controls,
+.product-card.list:hover .wishlist-list {
+  display: flex;
+}
+
+.product-controls,
+.wishlist {
+  display: none;
+  position: absolute;
+  bottom: 85px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+}
+
+.product-card.grid .wishlist {
+  top: 10px;
+  right: 10px;
+  bottom: auto;
+  left: auto;
+  transform: none;
+}
+
+.product-card.list .wishlist-list {
+  display: none;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.wishlist .heart-icon,
+.wishlist-list .heart-icon {
+  font-size: 14.63px;
+  color: #efa142;
+  width: 14.63px;
+  height: 13.5px;
+  cursor: pointer;
+}
+
+.wishlist .heart-icon:hover,
+.wishlist-list .heart-icon:hover {
+  color: #efa142;
+}
+
+.add-to-cart {
+  background-color: #96c361;
+  color: #fff;
+  border: none;
+  width: 138px;
+  height: 33px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-right: 8px;
+  z-index: 20;
+}
+
+.add-to-cart:hover {
+  background-color: #7daf42;
+}
+
+.quantity-control {
+  display: flex;
+  align-items: center;
+}
+
+.quantity-control button {
+  background-color: #a5a5a5;
+  border: none;
+  padding: 5px;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-family: "Cera Pro", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 16px;
+  text-align: left;
+}
+
+.quantity-control span {
+  margin: 0 8px;
+  font-size: 16px;
+}
+
+.product-info {
+  text-align: left;
+  z-index: 1;
+  position: relative;
+  margin-top: 30px;
+}
+
+.product-info h5 {
+  font-family: "Stolzl", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 18.5px;
+  margin: 12px 0 5px 0;
+}
+
+.product-info p {
+  font-family: "Stolzl", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  color: #96c361;
+  margin: 0;
+}
+
+.product-card.grid:hover .product-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.product-card.grid:hover .product-controls,
+.product-card.grid:hover .wishlist {
+  display: flex;
+}
+
+.product-card.list:hover .product-controls,
+.product-card.list:hover .wishlist-list {
+  display: flex;
+}
+
+.pagination {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.page-number {
+  margin: 0 5px;
+  padding: 10px 15px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  cursor: pointer;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'stolzl', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.page-number.active {
+  background-color: #96c361;
+  color: white;
+  border-color: #96c361;
+}
+
+.page-number.next-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sale-label {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: #96c361;
+  color: white;
+  padding: 5px 10px;
+  font-size: 14px;
+  font-weight: 700;
+  z-index: 10;
+  border-radius: 3px;
+}
+
+.product-card-price-old {
+  margin-left: 0.5rem;
+  text-decoration: line-through;
+  color: #aaa;
+  font-size: 14px;
+}
+
+.page-number.next-page{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 35px;
+  height: 35px;
+}

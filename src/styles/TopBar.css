@@ -1,0 +1,158 @@
+/* TopBar.css */
+.top-bar {
+  background: #2A2A2A;
+  padding: 6px 128px 6.55px 117px;
+  color: white;
+  position: relative;
+}
+
+.top-bar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1140px;
+  margin: 0 auto;
+  vertical-align: baseline;
+}
+
+.city {
+  margin-right: auto;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  position: relative; 
+}
+
+.social-icons-top {
+  display: flex;
+  align-items: center;
+  height: 37px;
+}
+
+.social-icons-top a {
+  color: white;
+  width: 37px;
+  height: 37px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 6px;
+  background-color: #2A2A2A;
+}
+
+.social-icons-top a:first-child {
+  margin-left: 0;
+}
+
+.confirmation-modal {
+  position: absolute;
+  width: 249px;
+  height: 106px;
+  top: 40%; 
+  left: 19%;
+  background-color: #96C361;
+  border-radius: 6px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.confirmation-modal p {
+  margin: 0 0 10px 0;
+  text-align: center;
+}
+
+.confirmation-modal button {
+  margin: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+  border: none;
+  color: #fff;
+  border-radius: 5px;
+  width: 93px;
+  height: 33px;
+}
+
+.yes-button {
+  background-color: #231F20;
+}
+
+.yes-button:hover {
+  background-color: #2A2A2A;
+}
+
+.no-button {
+  background-color: #96C361;
+  color: #231F20;
+}
+
+.no-button:hover {
+  background-color: #84ac57;
+  color: #fff;
+}
+
+.buttons-modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.city-modal {
+  width: 671px;
+  height: 358px;
+  background-color: white;
+  border-radius: 5px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  z-index: 1000;
+  color:#000000;
+}
+
+.city-modal h3 {
+  margin: 0 0 46px 0;
+  text-align: left;
+  width: 100%;
+}
+
+.city-list {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 10px;
+  max-height: 300px;
+  overflow-y: auto;
+  font-family: Stolzl;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 14px;
+  text-align: left;
+}
+
+.city-option {
+  cursor: pointer;
+  padding: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.city-option:hover {
+  color: #96C361;
+}
