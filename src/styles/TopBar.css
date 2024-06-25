@@ -1,4 +1,14 @@
 /* TopBar.css */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+
 .top-bar {
   background: #2A2A2A;
   padding: 6px 128px 6.55px 117px;
@@ -58,6 +68,11 @@
   align-items: center;
   justify-content: center;
   z-index: 1000;
+  opacity: 0;
+}
+
+.confirmation-modal.show {
+  animation: fadeIn 0.5s ease-in-out 1s forwards; /* добавлена задержка 1с */
 }
 
 .confirmation-modal p {

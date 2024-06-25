@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { FaVk, FaYoutube, FaTelegramPlane, FaChevronDown } from 'react-icons/fa';
 import './../styles/TopBar.css';
 
@@ -12,6 +12,13 @@ const TopBar = () => {
   const [currentCity, setCurrentCity] = useState('Москва');
   const [isCityModalOpen, setIsCityModalOpen] = useState(false);
   const [isConfirmationModalOpen, setIsConfirmationModalOpen] = useState(true);
+  const [showModal, setShowModal] = useState(false);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setShowModal(true);
+    }, 10); // Delay to ensure CSS transition
+  }, []);
 
   const handleCityClick = (city) => {
     setCurrentCity(city);
@@ -39,7 +46,6 @@ const TopBar = () => {
       <div className="top-bar-container">
         <div className="city" onClick={handleTopBarCityClick}>
           {currentCity} <FaChevronDown size={12} />
-         
         </div>
         <div className="social-icons-top">
           <a href="#"><FaVk size={16} /></a>
@@ -48,14 +54,14 @@ const TopBar = () => {
         </div>
       </div>
       {isConfirmationModalOpen && (
-            <div className="confirmation-modal">
-              <p>Ваш город {currentCity} верно?</p>
-              <div className="buttons-modal">
-                <button className="yes-button" onClick={handleYesClick}>Да</button>
-                <button className="no-button" onClick={handleNoClick}>Нет</button>
-              </div>
-            </div>
-          )}
+        <div className={`confirmation-modal ${showModal ? 'show' : ''}`}>
+          <p>Ваш город {currentCity} верно?</p>
+          <div className="buttons-modal">
+            <button className="yes-button" onClick={handleYesClick}>Да</button>
+            <button className="no-button" onClick={handleNoClick}>Нет</button>
+          </div>
+        </div>
+      )}
       {isCityModalOpen && (
         <div className="overlay" onClick={() => setIsCityModalOpen(false)}>
           <div className="city-modal" onClick={(e) => e.stopPropagation()}>

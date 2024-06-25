@@ -1,14 +1,15 @@
+/* CategoryFilter.css */
+
 .category-filter-container {
   background-color: #fff;
 }
 
 .category-filter {
   width: 310px;
-  height: 626px;
   background-color: #fbfbfb;
   padding: 16px;
   border: none;
-  text-align: left; /* Выровнять весь текст по левому краю */
+  text-align: left;
 }
 
 .categories h4,
@@ -16,22 +17,17 @@
   margin-bottom: 17px;
   font-size: 18px;
   color: #333;
-  text-align: left; /* Выровнять текст заголовков по левому краю */
+  text-align: left;
 }
 
 .categories ul {
   list-style: none;
   padding: 0;
-  text-align: left; /* Выровнять текст категорий по левому краю */
+  text-align: left;
 }
 
 .categories li {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
   margin-bottom: 24px;
-  padding-left: 0px;
-  padding-right: 24px;
   cursor: pointer;
   font-family: Stolzl;
   font-size: 16px;
@@ -40,33 +36,51 @@
   text-align: left;
 }
 
-.categories li:hover .category-name,
-.categories li:hover .category-count,
-.categories li:hover .icon {
-  color: #96c361;
-}
-
-.categories li:hover .icon svg path {
-  stroke: #96c361;
-}
-
-.categories .category-count {
+.category-header {
   display: flex;
+  justify-content: space-between;
   align-items: center;
 }
 
-.categories .icon {
-  margin-right: 10px; /* Отступ справа для иконки */
+.category-header .icon {
+  margin-right: 10px;
+  transition: transform 0.3s;
 }
 
-.categories .category-name {
-  flex: 1;
-  text-align: left; /* Выровнять текст категорий по левому краю */
+.category-header:hover .category-name,
+.category-header:hover .category-count,
+.category-header:hover .icon {
+  color: #96c361;
+}
+
+.category-header:hover .icon svg path {
+  stroke: #96c361;
+}
+
+.category-header.active .icon {
+  transform: rotate(180deg);
+}
+
+.subcategory-list {
+  list-style: none;
+  padding: 0 0 0 20px;
+  margin: 10px 0 0;
+}
+
+.subcategory-list li {
+  margin-bottom: 5px;
+  cursor: pointer;
+  margin-left: 35px;
+  padding: 5px;
+}
+
+.subcategory-list li:hover {
+  color: #96c361;
 }
 
 .price-range {
   margin-top: 36px;
-  text-align: left; /* Выровнять текст цены по левому краю */
+  text-align: left;
 }
 
 .price-range .slider {
@@ -83,7 +97,7 @@
   font-weight: 400;
   line-height: 18.5px;
   text-align: left;
-  color: #96C361;
+  color: #96c361;
 }
 
 .filter-buttons {
@@ -102,7 +116,7 @@
   font-size: 16px;
   font-weight: 400;
   line-height: 18.5px;
-  text-align: center; /* Выровнять текст в кнопках по центру */
+  text-align: center;
 }
 
 .apply-button {
@@ -131,9 +145,7 @@
   width: 310px;
   height: 599px;
 }
-.advertisement {
-  background-color: none;
-}
+
 .horizontal-slider {
   width: 100%;
   height: 4px;
@@ -181,7 +193,6 @@
 .thumb.active {
   border: 3px solid #ffffff;
 }
-
 
 .view-toggle IoGridSharp :hover {
   color: #96c361;

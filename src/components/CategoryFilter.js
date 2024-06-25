@@ -5,18 +5,19 @@ import ReactSlider from "react-slider";
 
 const CategoryFilter = () => {
   const [categories] = useState([
-    { name: "Любой магазин", count: 33 },
-    { name: "IQOS", count: 12 },
-    { name: "Аксессуары", count: 65 },
-    { name: "Кальянные смеси", count: 39 },
-    { name: "Кальяны", count: 23 },
-    { name: "Комплектующие", count: 17 },
-    { name: "Мерч", count: 19 },
-    { name: "Уголь", count: 13 },
-    { name: "Электронные сигареты", count: 8 },
+    { name: "Любой магазин", count: 33, subcategories: [] },
+    { name: "IQOS", count: 12, subcategories: ["IQOS Heets", "IQOS Accessories"] },
+    { name: "Аксессуары", count: 65, subcategories: ["Кейсы", "Чехлы", "Зарядные устройства"] },
+    { name: "Кальянные смеси", count: 39, subcategories: ["Табак", "Сиропы", "Камни"] },
+    { name: "Кальяны", count: 23, subcategories: ["Традиционные", "Электронные", "Мини"] },
+    { name: "Комплектующие", count: 17, subcategories: ["Шахты", "Колбы", "Мундштуки"] },
+    { name: "Мерч", count: 19, subcategories: ["Футболки", "Кепки", "Стикеры"] },
+    { name: "Уголь", count: 13, subcategories: ["Кокосовый", "Древесный"] },
+    { name: "Электронные сигареты", count: 8, subcategories: ["POD системы", "Батарейки", "Зарядные устройства"] },
   ]);
 
   const [priceRange, setPriceRange] = useState([100, 15000]);
+  const [activeCategory, setActiveCategory] = useState(null);
 
   const handleThumbActive = (index) => {
     const thumbs = document.querySelectorAll(".thumb");
@@ -24,6 +25,10 @@ const CategoryFilter = () => {
     setTimeout(() => {
       thumbs[index].classList.remove("active");
     }, 200);
+  };
+
+  const toggleCategory = (index) => {
+    setActiveCategory(activeCategory === index ? null : index);
   };
 
   return (
@@ -34,27 +39,36 @@ const CategoryFilter = () => {
           <ul>
             {categories.map((category, index) => (
               <li key={index}>
-                <span className="category-name">
-                  <i className="icon">
-                    <svg
-                      width="12"
-                      height="8"
-                      viewBox="0 0 12 8"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M10.6666 1.66699L5.99992 6.33366L1.33325 1.66699"
-                        stroke="#231F20"
-                        strokeWidth="1.5"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      />
-                    </svg>
-                  </i>{" "}
-                  {category.name}
-                </span>
-                <span className="category-count">({category.count})</span>
+                <div className="category-header" onClick={() => toggleCategory(index)}>
+                  <span className="category-name">
+                    <i className="icon">
+                      <svg
+                        width="12"
+                        height="8"
+                        viewBox="0 0 12 8"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M10.6666 1.66699L5.99992 6.33366L1.33325 1.66699"
+                          stroke="#231F20"
+                          strokeWidth="1.5"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        />
+                      </svg>
+                    </i>{" "}
+                    {category.name}
+                  </span>
+                  <span className="category-count">({category.count})</span>
+                </div>
+                {activeCategory === index && (
+                  <ul className="subcategory-list">
+                    {category.subcategories.map((subcategory, subIndex) => (
+                      <li key={subIndex}>{subcategory}</li>
+                    ))}
+                  </ul>
+                )}
               </li>
             ))}
           </ul>
